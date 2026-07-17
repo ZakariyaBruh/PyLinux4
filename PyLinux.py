@@ -16,7 +16,6 @@ try:
     import time
     import random
     from tqdm import tqdm
-    import sys
     import runpy
     from urllib.parse import quote
     import shutil
@@ -116,12 +115,12 @@ def shutdown():
             os.chdir("..")
             shutil.rmtree("system")
             print("SYSTEM DELETED. EXITING ENVIROMENT")
-            sys.exit()
+            exit()
         elif not Sandbox:
             time.sleep(0.1)
             print("GOODBYE")
             time.sleep(0.8)
-            sys.exit()
+            exit()
         print("Run this in the 'system' directory")
 def exitSandbox():
     global Sandbox
