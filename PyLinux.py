@@ -9,7 +9,7 @@ while not f:
         print("Type 'setup' to start")
     else:
         print(f"'{g}' is not recognised as a command")
-print("Installing Base System Requirements")
+print("Importing Base System Requirements")
 from pathlib import Path
 import requests
 import time
