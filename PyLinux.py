@@ -10,16 +10,21 @@ while not f:
     else:
         print(f"'{g}' is not recognised as a command")
 print("Importing Base System Requirements")
-from pathlib import Path
-import requests
-import time
-import random
-from tqdm import tqdm
-import sys
-import runpy
-from urllib.parse import quote
-import shutil
-import os
+try:
+    from pathlib import Path
+    import requests
+    import time
+    import random
+    from tqdm import tqdm
+    import sys
+    import runpy
+    from urllib.parse import quote
+    import shutil
+    import os
+except Exception as e:
+    print(f"Error {e}. SOMETHING BAD HAPPENED. SOME COMMANDS MAY FAIL")
+    if input("CONTINUE ANYWAYS? (Y/N) ").strip().lower() == "n":
+        exit()
 time.sleep(1.2)
 print("Done")
 time.sleep(0.1)
